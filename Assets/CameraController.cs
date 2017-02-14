@@ -7,9 +7,7 @@ public class CameraController : MonoBehaviour {
 	public GameObject playerGameObject;
 
 	private Vector3 offset;
-	public float damping = 0.5f;
-
-
+	public float damping = 1f;
 
 	// Use this for initialization
 	void Start () {
@@ -23,7 +21,7 @@ public class CameraController : MonoBehaviour {
 		float desiredAngle = playerGameObject.transform.eulerAngles.y;
 		float angle = Mathf.LerpAngle(currentAngle, desiredAngle, Time.deltaTime * damping);
 
-		Quaternion rotation = Quaternion.Euler(0, angle, 0);
+		Quaternion rotation = Quaternion.Euler(0, desiredAngle, 0);
 		transform.position = playerGameObject.transform.position - (rotation * offset);
 
 		transform.LookAt(playerGameObject.transform);

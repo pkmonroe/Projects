@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour {
 	public GameObject playerWatcher;
 
 	private float speed = 8000.0f;
+	public float rotationSpeed = 2;
 
 	private Rigidbody rb;
 
@@ -21,22 +22,25 @@ public class PlayerController : MonoBehaviour {
 		float moveHorizontal = Input.GetAxis ("Horizontal");
 		float moveVertical = Input.GetAxis ("Vertical");
 
-		//if (moveVertical > 0) {
-			Vector3 movement = playerWatcher.transform.forward * moveVertical;
+		Vector3 movement = playerWatcher.transform.forward * moveVertical;
+		float rotation = moveHorizontal * rotationSpeed;
 
-			playerWatcher.transform.Rotate (new Vector3 (0.0f, moveHorizontal, 0.0f), Space.World);
-			playerWatcher.transform.position = transform.position;
+		playerWatcher.transform.Rotate (new Vector3 (0.0f, rotation, 0.0f), Space.World);
+		playerWatcher.transform.position = transform.position;
 
-			GetComponent<Rigidbody> ().AddForce (movement * speed * Time.deltaTime);
-		//}
+		rb.AddForce (movement * speed * Time.deltaTime);
 
 	}
 
-	void OnCollisionEnter (Collision col)
+	void OnCollisionEnter(Collision collision)
 	{
-		if(col.gameObject.name == "Cube")
+		if(collision.gameObject.tag == "Debris")
 		{
-			col.gameObject.transform.parent = this.transform;
+			//find the colloision point.
+			ContactPoint cp = collision.contacts[0];
+
+			Debris debris = collision.gameObject.GetComponent<Debris> ();
+			debris.AttachToPlayer (cp.point, transform);
 		}
 	}
 		
