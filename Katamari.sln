@@ -1,11 +1,7 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
-Project("{D2541A21-6B74-5C7B-B33A-6EF117077896}") = "Katamari", "Assembly-CSharp-firstpass.csproj", "{941D5930-CE15-9E5A-DA42-322A01CC049F}"
-EndProject
 Project("{D2541A21-6B74-5C7B-B33A-6EF117077896}") = "Katamari", "Assembly-CSharp.csproj", "{A704FB8B-073E-EB19-6204-03A750E8D9A7}"
-EndProject
-Project("{D2541A21-6B74-5C7B-B33A-6EF117077896}") = "Katamari", "Assembly-CSharp-Editor-firstpass.csproj", "{4F617EDE-665F-54D0-97E2-AD13D2FCE0EC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,18 +9,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{941D5930-CE15-9E5A-DA42-322A01CC049F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{941D5930-CE15-9E5A-DA42-322A01CC049F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{941D5930-CE15-9E5A-DA42-322A01CC049F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{941D5930-CE15-9E5A-DA42-322A01CC049F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A704FB8B-073E-EB19-6204-03A750E8D9A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A704FB8B-073E-EB19-6204-03A750E8D9A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A704FB8B-073E-EB19-6204-03A750E8D9A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A704FB8B-073E-EB19-6204-03A750E8D9A7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4F617EDE-665F-54D0-97E2-AD13D2FCE0EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4F617EDE-665F-54D0-97E2-AD13D2FCE0EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4F617EDE-665F-54D0-97E2-AD13D2FCE0EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4F617EDE-665F-54D0-97E2-AD13D2FCE0EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
