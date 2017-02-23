@@ -11,7 +11,10 @@ public class AnimalScript : MonoBehaviour {
 		if (playerGameObject != null) {
 			transform.LookAt (playerGameObject.transform);
 		} else {
-			playerGameObject = Object.FindObjectOfType<PlayerController> ().playerWatcher;		
+			PlayerController playerController = Object.FindObjectOfType<PlayerController>();
+			if (playerController != null) {
+				playerGameObject = playerController.playerWatcher;	
+			}
 		}
 	}
 }

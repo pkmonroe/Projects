@@ -5,14 +5,11 @@ using UnityEngine;
 public class PlayerWatcher : MonoBehaviour {
 
 	public GameObject player;
-
-	// Use this for initialization
-	void Start () {
-		
-	}
 	
 	// Update is called once per frame
 	void Update () {
-		transform.position = player.transform.position;
+		if (player != null) {
+			transform.position = player.transform.position;
+		}
 	}
 }

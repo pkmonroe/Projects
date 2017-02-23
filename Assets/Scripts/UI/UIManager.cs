@@ -9,7 +9,11 @@ public class UIManager : MonoBehaviour {
 	public static UIManager Instance { get { return _instance; } }
 
 	//UI Elements
-	public UILabel ScoreLabel;
+	public UILabel HealthLabel;
+	public UILabel CollectedLabel;
+	public UILabel ElapsedLabel;
+
+	public GameObject MainMenu;
 
 	void Awake() {
 		_instance = this;
